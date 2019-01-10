@@ -81,6 +81,16 @@ public class BinarySearchTree implements Tree{
         return node;
     }
 
+    /**
+     *  This function deletes a key from the BST.
+     *  There are 3 possible cases:
+     *  1. The node is a leaf node. Simply delete the node.
+     *  2. The node has a single child. In this case assign to child to its parent. The child node will be on the same side(left/ right) as earlier.
+     *  3. The node has 2 children. In this case we are left with a left subtree and a right subtree.
+     *     In this case we need to find the smallest node from the right subtree and reassign it as the root of the BST.
+     *
+     * @param key to be inserted
+     */
     @Override
     public void delete(int key) {
         delete(key, root);
@@ -112,9 +122,15 @@ public class BinarySearchTree implements Tree{
             }else if(node.left == null){
                 return node.right;
             }
-            /* Two child case */
+            /*
+               Two child case
+
+            */
             else{
+                // Min min val of the right sub-tree and assign it as current node.
+                // This node will be a leaf node.
                 node.value = min(node.right);
+                // Delete the min node.
                 node.right = delete(node.value, node.right);
             }
         }
@@ -122,7 +138,6 @@ public class BinarySearchTree implements Tree{
     }
 
     private int min(Node node){
-
         while(node.left !=null){
             node = node.left;
         }
