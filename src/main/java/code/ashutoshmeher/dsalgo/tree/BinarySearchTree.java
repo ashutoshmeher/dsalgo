@@ -1,6 +1,6 @@
 package code.ashutoshmeher.dsalgo.tree;
 
-public class BinarySearchTree implements Tree{
+public class BinarySearchTree implements BinaryTree{
 
     /**
      * The root node of the BST
@@ -137,7 +137,7 @@ public class BinarySearchTree implements Tree{
         return node;
     }
 
-    private int min(Node node){
+    public int min(Node node){
         while(node.left !=null){
             node = node.left;
         }
@@ -174,6 +174,7 @@ public class BinarySearchTree implements Tree{
     public void postOrderTraversal(){
         postOrder(root);
     }
+
 
     private void postOrder(Node node){
         if(node == null)
