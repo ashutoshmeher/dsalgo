@@ -1,6 +1,5 @@
 package code.ashutoshmeher.dsalgo.search;
 
-import jdk.nashorn.internal.objects.annotations.Setter;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
