@@ -42,4 +42,32 @@ public class BinarySearchTest {
         System.out.println(result);
         Assert.assertEquals(7, result);
     }
+
+    @Test
+    public void testSearchNotFoundNR(){
+        int result = BinarySearch.searchNonRecursive(inputArray, 10);
+        System.out.println(result);
+        Assert.assertEquals(-1, result);
+    }
+
+    @Test
+    public void testSearchFirstElementNR(){
+        int result = BinarySearch.searchNonRecursive(inputArray, 2);
+        System.out.println(result);
+        Assert.assertEquals(0, result);
+    }
+
+    @Test
+    public void testSearchLastElementNR(){
+        int result = BinarySearch.searchNonRecursive(inputArray, 90);
+        System.out.println(result);
+        Assert.assertEquals(10, result);
+    }
+
+    @Test
+    public void testSearchRandomElementNR(){
+        int result = BinarySearch.searchNonRecursive(inputArray, 45);
+        System.out.println(result);
+        Assert.assertEquals(7, result);
+    }
 }

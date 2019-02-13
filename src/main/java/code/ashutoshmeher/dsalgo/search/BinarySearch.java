@@ -23,4 +23,26 @@ public class BinarySearch {
         return -1;
     }
 
+    public static int searchNonRecursive(int arr[], int key){
+        int l = 0;
+        int r = arr.length-1;
+
+        while (r-l >=0){
+            int mid = (l+r) /2;
+
+            if(arr[mid] == key){
+                return mid;
+            }
+
+            if(key > arr[mid]){
+                l = mid+1;
+            }else{
+                r = mid-1;
+            }
+        }
+
+        return -1;
+
+    }
+
 }
