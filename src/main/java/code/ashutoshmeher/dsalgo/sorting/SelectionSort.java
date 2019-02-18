@@ -5,6 +5,7 @@ package code.ashutoshmeher.dsalgo.sorting;
  * This algorithm sorts an array by repeatedly finding the minimum element and putting it in the beginning.
  * Time Complexity:  O(n^2)
  * Space Complexity: O(1)
+ * Stable: No
  *
  * NOTE: Selection Sort doesn't make more than O(n) swaps, hence is useful in cases where swapping is a costly operation.
  */

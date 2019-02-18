@@ -1,5 +1,15 @@
 package code.ashutoshmeher.dsalgo.sorting;
 
+/**
+ * BUBBLE SORT
+ * This algorithm sorts an array by repeatedly swapping adjacent elements if they are in incorrect order.
+ * Time Complexity:  O(n^2). Runs for O(n^2) even for a sorted array.
+ * Best Case Time Complexity: O(n)
+ * Space Complexity: O(1)
+ * Stable: Yes
+ *
+ * NOTE: Used to sort an almost sorted array in linear time complexity.
+ */
 public class BubbleSort {
 
     public static int[] sort(int [] input){
